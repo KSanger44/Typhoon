@@ -12,13 +12,13 @@
         </div>
 
         <div class="navbar">
-          <a href="index.html">Home</a>
-          <a href="requirements.html">Requirements</a>
+          <a href="index.php">Home</a>
+          <a href="requirements.php">Requirements</a>
           <div class="dropdown">
             <button class="dropbtn">Sites</button>
             <div class="dropdown-content">
-              <a href="undergrad.html">Undergraduate</a>
-              <a href="grad.html">Graduate</a>
+              <a href="undergrad.php">Undergraduate</a>
+              <a href="grad.php">Graduate</a>
             </div>
           </div>
           <a href="admin.html">Admin</a> 
