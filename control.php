@@ -103,7 +103,7 @@
 
 
     
-        if(isset($_POST['site']) && $name != ""){
+        if(isset($_POST['submit']) && $name != ""){
             
             //insert into site table
             
