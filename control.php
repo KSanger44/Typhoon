@@ -106,7 +106,7 @@
           <br><br>
           <div id="addAnnouncement">
             <h3>Add Announcement</h3>
-            <form>
+            <form action="" method="post">
                 <label for="Announcement">Announcement Title:</label><br>
                 <input type="text" id="Announcement" name="Announcement"><br>
                 <label for="AnnounceDesc">Description:</label><br>
@@ -191,7 +191,7 @@
         }
 
 
-  $conn->close();      
+      $conn->close();      
     ?>
     </body>
 </html>
