@@ -27,25 +27,28 @@
           </div>
 
     <?php
+        include("typhoonconfig.php");
+        session_start();
+        $sql = "SELECT * FROM site WHERE level = 'g' or level = 'b'";
+        $result = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     
-          //connect to db schema
-          $servername = 'localhost';
-          $username = 'root';
-          $password = "";
-          $dbname = "typhoon";
-      
-          $conn = new mysqli($servername, $username, $password, $dbname);
+        $name = $row["name"];
+        $level = $row["level"];
+        $street = $row["street"];
+        $city = $row["city"];
+        $zip = $row["zip"];
+        $myce = $row["myce"];
+        $tb90day = $row["90daytb"];
+        $tb2step = $row["2steptb"];
+        $drugscreen = $row["drugscreen"];
+        $req = $row["uniquereq"];
 
-          //execute the sql query
-          $sql = "select name, level, myce, 2steptb, drugscreen, 90daytb, uniquereq
-          from SITE
-          where level = 'g' or
-          level = 'b'"
 
           //display the sql result set in an html table
-          $result = $conn->query($sql);
+          $table = $conn->query($sql);
 
-          if ($result->num_rows > 0) {
+          if ($table->num_rows > 0) {
             //output each result row
             
                 echo "<table>";
