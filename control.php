@@ -93,18 +93,7 @@
                   echo "<option value ='" . $lrow['sID'] . "'>" . $lrow['name'] . " (" . $lrow['level'] . ") </option>";
                 }
               }
-              
-              if(isset($_GET['deletesite'])){
-                $deletesite = $_GET['sitelist'];
-                $dsql = "DELETE FROM site WHERE sID = '$deletesite'"; 
-                if (mysqli_query($conn, $dsql)) {
-                  echo "Record deleted successfully";
-                } else {
-                  echo "Error deleting record: " . mysqli_error($conn);
-                }   
-              }
-              
-                echo $deletesite;
+                
                 ?>
             </select>
             <input type="submit" id="deletesite" name="deletesite" value="Delete">
@@ -190,6 +179,15 @@
           }      
         }
 
+        if(isset($_GET['deletesite'])){
+          $deletesite = $_GET['sitelist'];
+          $dsql = "DELETE FROM site WHERE sID = '$deletesite'"; 
+          if (mysqli_query($conn, $dsql)) {
+            echo "Record deleted successfully";
+          } else {
+            echo "Error deleting record: " . mysqli_error($conn);
+          }   
+        }
 
 
   $conn->close();      
