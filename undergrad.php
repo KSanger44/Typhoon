@@ -3,8 +3,8 @@
     include("typhoonconfig.php");
     session_start();
     $sql = "SELECT * FROM 'site' WHERE 'level' = 'u' or 'level' = 'b'";
-    $result = mysqli_query($conn,$esql);
-    $row = mysqli_fetch_array($eresult,MYSQLI_ASSOC);
+    $result = mysqli_query($conn,$sql);
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
     $name = $row["name"];
     $level = $row["level"];
