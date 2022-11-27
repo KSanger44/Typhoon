@@ -5,7 +5,14 @@
         <title>Typhoon</title>
         <script>
             function darkMode() {
-            var element = document.getElementsByClassName('announcements');
+            document.getElementsByClassName('announcements').style.backgroundColor = "black";
+            document.getElementsByClassName('announcements').style.color = "white"
+            element.classList.toggle("darkmode");
+            }
+
+            function lightkMode() {
+            document.getElementsByClassName('announcements').style.backgroundColor = "aliceblue";
+            document.getElementsByClassName('announcements').style.color = "black"
             element.classList.toggle("darkmode");
             }
         </script>
@@ -58,7 +65,8 @@
                       <h3>Announcements</h3>
                     </div>
                     <div class="announcement">
-                    <button onclick="darkMode()">Toggle dark mode</button>
+                    <button onclick="darkMode()">Dark mode</button>
+                    <button onclick="lightMode()">Light mode</button>
                     <?php
                       include("typhoonconfig.php");
                       session_start();
