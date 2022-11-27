@@ -167,26 +167,7 @@
   
 }
 
-.announcements {
 
-  background-color: aliceblue;
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 5;
-  align-items: center;
-  justify-items: center;
-}
-
-.aheader {
-  background-color: aliceblue;
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  align-items: center;
-  justify-items: center;
-}
 
 #ugHospitals {
   grid-column-start: 2;
@@ -260,7 +241,38 @@ summary {
   font-size: 3em;
 }
 
+.aheader {
+  background-color: aliceblue;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  align-items: center;
+  justify-items: center;
+}
+
+.announcements {
+
+  background-color: aliceblue;
+  color: black;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  align-items: center;
+  justify-items: center;
+}
+
+
 .darkmode {
   background-color: black;
   color: white;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  align-items: center;
+  justify-items: center;
 }
+
+
