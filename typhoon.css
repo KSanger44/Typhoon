@@ -251,7 +251,19 @@ summary {
   justify-items: center;
 }
 
-.announcements {
+#announcements {
+
+  background-color: aliceblue;
+  color: black;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  align-items: center;
+  justify-items: center;
+}
+
+.lightmode {
 
   background-color: aliceblue;
   color: black;

@@ -47,11 +47,11 @@
                   <a href="https://register.myclinicalexchange.com/MainPage.aspx?ReturnUrl=%2f"><img src="MyCEthumb.png" alt="MyClinicalExchange logo"></a><br>
                   <a href="https://register.myclinicalexchange.com/MainPage.aspx?ReturnUrl=%2f">MyClinicalExchange</a> 
                 </div>
-                <div class="announcements">
+                <div id="announcements">
                     <div class="aheader">
                       <h3>Announcements</h3>
-                      <button onclick="darkMode()">Dark mode</button>
-                      <button onclick="lightMode()">Light mode</button>
+                      <button onclick="darkMode()">Toggle dark mode</button>
+                      
                     </div>
                     <?php
                       include("typhoonconfig.php");
@@ -78,15 +78,12 @@
     </body>
     <script>
             function darkMode() {
-            document.getElementsByClassName('announcements').style.backgroundColor = "black";
-            document.getElementsByClassName('announcements').style.color = "white"
-            element.classList.toggle("darkmode");
-            }
-
-            function lightkMode() {
-            document.getElementsByClassName('announcements').style.backgroundColor = "aliceblue";
-            document.getElementsByClassName('announcements').style.color = "black"
-            element.classList.toggle("darkmode");
+              var Elem = document.getElementById("announcements");
+              if (sampleElem.className === "lightmode") {
+              sampleElem.className = "darkmode";
+              } else {
+              sampleElem.className = "lightmode";
+              }
             }
         </script>
 </html>
