@@ -251,4 +251,7 @@
 #passdiv form{
   display: inline-block;
 }
-  
+
+details {
+  font-size: 1.5em;
+}
