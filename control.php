@@ -96,10 +96,10 @@
               
               if(isset($GET['deletesite'])){
                 $dsql = "DELETE FROM site WHERE sID = '$_GET[sitelist]'"; 
-                if ($conn->query($dsql) === TRUE) {
+                if (mysqli_query($conn, $dsql)) {
                   echo "Record deleted successfully";
                 } else {
-                  echo "Error deleting record: " . $conn->error;
+                  echo "Error deleting record: " . mysqli_error($conn);
                 }   
               }
               
