@@ -5,7 +5,7 @@
         <title>Typhoon</title>
 
         <script>
-        function sampleFunction() {
+        function toggledark() {
           var Elem = document.getElementById("announcements");
           if (Elem.className === "announcements") {
           Elem.className = "darkmode";
@@ -61,7 +61,7 @@
                 <div id="announcements">
                     <div class="aheader">
                       <h3>Announcements</h3>
-                      <button onclick="darkMode()">Toggle dark mode</button>
+                      <button onclick="toggledark()">Toggle dark mode</button>
                       
                     </div>
                     <?php
