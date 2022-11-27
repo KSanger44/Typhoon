@@ -107,7 +107,7 @@
             
             //insert into site table
             
-            $insert = "INSERT INTO site (sID, name, level, street, city, state, zip, myce, 90daytb, 2steptb, uniquereq) 
+            $insert = "INSERT INTO `site` (`sID`, `name`, `level`, `street`, `city`, `state`, `zip`, `myce`, `90daytb`, `2steptb`, `uniquereq`) 
                                 VALUES (NULL, '$name', '$level', '$street', '$city', '$state', '$zip', '$myce', '$tb90day', '$tb2step', '$reqs')";
                                 
 
