@@ -77,10 +77,10 @@
               $lrow = mysqli_fetch_array($lresult,MYSQLI_ASSOC);
 
               //display the sql result set in an html table
-              $table = $conn->query($sql);
+              $table = $conn->query($lsql);
 
                 //output each result row
-                while($row = $result->fetch_assoc()){
+                while($lrow = $result->fetch_assoc()){
                   echo "<option value =" . $row['sID'] . ">" . $row['name'] . "</option>";
                 }
               
