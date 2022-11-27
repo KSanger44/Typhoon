@@ -65,7 +65,7 @@
           <br><br>
 
           <div id="sitedelete">
-          <form action="" method="get>
+          <form action="" method="get">
             <h3>Remove Sites</h3>
             <label for="sites">Site to delete:</label>
             <select id="sites" name="sitelist">
@@ -105,7 +105,7 @@
 
                 ?>
             </select>
-            <input type="submit" id="deletesite" name="deletesite">
+            <input type="submit" id="deletesite" name="deletesite" value="Delete">
           </form>
 
           </div>
