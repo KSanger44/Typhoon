@@ -41,13 +41,12 @@
         data.addColumn('string', 'Address');
         data.addColumn('string', 'Location');
         data.addColumn('string', 'Marker')
-  
+        
         data.addRows([
+          <?php
+          ['$street, $city, $state $zip, United States', '$name', 'blue'],
+          ?>
           ['202 S Park St, Madison, WI 53715, United States',                  'Meriter Hospital',   'blue'],
-          ['801 Braxton Place, Madison, WI 53715, United States',   'Select Specialty Hospital',   'blue'],
-          ['700 S Brooks St, Madison, WI 53715, United States',     'SSM St. Marys',   'blue'],
-          ['600 Highland Ave, Madison, WI 53792, United States',     'UW Hospital',   'blue'],
-          ['2500 Overlook Terrace, Madison, WI 53705, United States',     'William S Middleton Memorial Veterans Hospital',   'blue']
         ]);
         
         var url = 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/';
