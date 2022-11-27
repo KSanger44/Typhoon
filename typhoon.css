@@ -215,6 +215,33 @@
   margin-bottom: 1em;
 }
 
+#gradHospitals {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 5;  
+}
+
+#gradHospitals summary {
+  font-size: 3em;
+}
+
+#gradHospitals p { 
+  font-size: 1.5em;
+}
+
+#gradHospitals h4 { 
+  font-size: 1.5em;
+}
+
+#gradHospitals a { 
+  font-size: 1.5em;
+}
+
+#gradHospitals details { 
+  margin-bottom: 1em;
+}
+
 #passdiv {
   width: 100%;
   font-size: 2.5em;

@@ -138,7 +138,7 @@
             <a href="https://register.myclinicalexchange.com/MainPage.aspx?ReturnUrl=%2f">MyClinicalExchange</a> 
           </div>
 
-          <div class="hospitals">
+          <div id="gradHospitals">
             <?php
                 //display the sql result set in an html table
                 $table = $conn->query($sql);
