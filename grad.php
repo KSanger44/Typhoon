@@ -45,34 +45,32 @@
         $req = $row["uniquereq"];
 
 
-          //display the sql result set in an html table
-          $table = $conn->query($sql);
+        //display the sql result set in an html table
+        $table = $conn->query($sql);
 
-          if ($table->num_rows > 0) {
+        if ($table->num_rows > 0) {
             //output each result row
+            while($row = $result->fetch_assoc()){
+            echo "<details>";
+            echo "<summary>" . $row['name'] . "</summary>";
+            echo "<h4>Unique Requirements:</h4>";
+            if($row['myce'] == 1){
+                echo "<a href='https://register.myclinicalexchange.com/MainPage.aspx?ReturnUrl=%2f'>MyClinicalExchange</a><br>";
+            }
+            if($row['90daytb'] == 1){
+                echo "<p>TB test 90 days before start date</p><br>";
+            }
+            if($row['2steptb'] == 1){
+                echo "<p>A 2-step TB test is required</p><br>";
+            }
+            if($row['drugscreen'] == 1){
+                echo "<p>A 10-Panel Drug Screen is required</p><br>";
+            }
+            echo $row['uniquereq'] . "<br>";
+            echo "</details>";
             
-                echo "<table>";
-                echo "<tr>";
-                    echo "<th>Site Name</th>";
-                    echo "<th>MyCE</th>";
-                    echo "<th>2-Step TB</th>";
-                    echo "<th>DrugScreen</th>";
-                    echo "<th>90 Day TB</th>";
-                echo "</tr>";
-    
-                while($row = $result->fetch_assoc()){
-                        echo "<tr>";
-                            echo "<td>" . $row['name'] . "</td>";
-                            echo "<td>" . $row['myce'] . "</td>";
-                            echo "<td>" . $row['2steptb'] . "</td>";
-                            echo "<td>" . $row['drugscreen'] . "</td>";
-                            echo "<td>" . $row['90daytb'] . "</td>";
-                            echo "<td>" . $row['uniquereq'] . "</td>";
-                        echo "</tr>";   
-                } //end of while
-            
-                echo"</table>";
-            } // end of if
+            }//end of while
+        }//end of if
         else{
             
             echo "<p>No results found.</p>";
