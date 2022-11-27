@@ -49,10 +49,28 @@
                 </div>
                 <div class="announcements">
                     <div class="aheader">
-                      <h4>Announcements</h4>
+                      <h3>Announcements</h3>
                     </div>
                     <div class="announcement">
-                      <p>Flu Shots are due by Nov 1st.</p>
+                    <?php
+                      include("typhoonconfig.php");
+                      session_start();
+                      $sql = "SELECT * FROM announcement ORDER BY date DESC LIMIT 10";
+                      $result = mysqli_query($conn,$sql);
+                      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+                      $title = $row["title"];
+                      $info = $row["info"];
+                      $date = $row["date"];
+
+                      $result = $conn->query($sql);
+           
+                      while($row = $result->fetch_assoc()){
+                              echo "<h4>" .  $row['title'] . "</h4>";
+                              echo "<p>" .  $row['info'] . "</p";
+                      } //end of while
+                  
+                      ?>
                     </div>
                 </div>              
           </div>

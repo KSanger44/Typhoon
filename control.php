@@ -73,6 +73,8 @@
                 <input type="text" id="Announcement" name="Announcement"><br>
                 <label for="AnnounceDesc">Description:</label><br>
                 <textarea id="announceDesc" name="AnnonceDesc" rows="4" cols="50"></textarea><br>
+                <br>
+                <input type="submit" id="submit2" name="submit2">
             </form>
           </div>
 
@@ -101,6 +103,10 @@
         $zip = isset($_POST['zip']) ? $_POST['zip'] : "";
         $level = isset($_POST['level']) ? $_POST['level'] : "";
 
+        $title = isset($_POST['Announcement']) ? $_POST['Announcement'] : "";
+        $info = isset($_POST['announceDesc']) ? $_POST['announceDesc'] : "";
+        $date=strtotime("Today");
+
 
     
         if(isset($_POST['submit']) && $name != ""){
@@ -118,7 +124,7 @@
                 echo "<p>Error: " . $insert . "<br>" . $conn->error . "</p>";
             } */
           
-            
+
            // Procedural insert into site table
            $sql = "INSERT INTO `site` #(`sID`, `name`, `level`, `street`, `city`, `state`, `zip`, `myce`, `90daytb`, `2steptb`, `drugscreen`, `uniquereq`) 
            VALUES (NULL, '$name', '$level', '$street', '$city', '$state', '$zip', '$myce', '$tb90day', '$tb2step', '$drugscreen', '$reqs')";
@@ -131,6 +137,17 @@
           }          
 
         }//end of isset if stmt
+
+        if(isset($_POST['submit2']) && $title != ""){
+          $sql2 = "INSERT INTO `announcement`
+          VALUES (NULL, '$title', '$info', '$date')";
+
+          if (mysqli_query($conn, $sql2)) {
+            echo "New record created successfully.";
+          } else {
+              echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+          }      
+        }
 
   $conn->close();      
     ?>
