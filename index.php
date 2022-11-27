@@ -5,7 +5,7 @@
         <title>Typhoon</title>
         <script>
             function darkMode() {
-            var element = document.body;
+            var element = document.div;
             element.classList.toggle("darkmode");
             }
         </script>
