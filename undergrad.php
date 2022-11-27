@@ -45,7 +45,7 @@
         data.addRows([
           while($row = $result->fetch_assoc()){
           <?php
-          echo "['$street, $city, $state $zip, United States', '$name', 'blue'],"
+          echo "['" . $street . "," . $city . "," . $state . $zip . ", United States" . "', '" . $name . "', 'blue'],"
           ?>
           }
           ['202 S Park St, Madison, WI 53715, United States',                  'Meriter Hospital',   'blue'],
