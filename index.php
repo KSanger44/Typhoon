@@ -4,11 +4,10 @@
         <link rel="stylesheet" href="typhoon.css">
         <title>Typhoon</title>
         <script>
-            let darkToggle = document.querySelector('#darkToggle');
-
-              darkToggle.addEventListener('change', ()=> {
-              document.body.classList.toggle('dark');
-            });
+            function darkMode() {
+            var element = document.div;
+            element.classList.toggle("darkmode");
+            }
         </script>
     </head>
     <body>
@@ -59,8 +58,7 @@
                       <h3>Announcements</h3>
                     </div>
                     <div class="announcement">
-                    <input type="checkbox" id="darkToggle">
-                    <label for="darkToggle">
+                    <button onclick="darkMode()">Toggle dark mode</button>
                     <?php
                       include("typhoonconfig.php");
                       session_start();
