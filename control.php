@@ -105,10 +105,10 @@
     
         if(isset($_POST['submit']) && $name != ""){
             
-            //insert into site table
+            //OOP insert into site table
             
-            $insert = "INSERT INTO `site` (`sID`, `name`, `level`, `street`, `city`, `state`, `zip`, `myce`, `90daytb`, `2steptb`, `uniquereq`) 
-                                VALUES (NULL, '$name', '$level', '$street', '$city', '$state', '$zip', '$myce', '$tb90day', '$tb2step', '$reqs')";
+            $insert = "INSERT INTO `site` #(`sID`, `name`, `level`, `street`, `city`, `state`, `zip`, `myce`, `90daytb`, `2steptb`, `drugscreen`, `uniquereq`) 
+                                VALUES (NULL, '$name', '$level', '$street', '$city', '$state', '$zip', '$myce', '$tb90day', '$tb2step', '$drugscreen', '$reqs')";
                                 
 
             if ($conn->query($insert) === TRUE) {
@@ -120,7 +120,7 @@
 
 
         }//end of isset if stmt
-        
+
   $conn->close();      
     ?>
     </body>
