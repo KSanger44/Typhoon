@@ -107,14 +107,15 @@
             
             //insert into site table
             
-            $sql = "INSERT INTO `site` (`sID`, `name`, `level`, `street`, `city`, `state`, `zip`, `myce`, `90daytb`, `2steptb`, `uniquereq`) 
+            $insert = "INSERT INTO site (sID, name, level, street, city, state, zip, myce, 90daytb, 2steptb, uniquereq) 
                                 VALUES (NULL, '$name', '$level', '$street', '$city', '$state', '$zip', '$myce', '$tb90day', '$tb2step', '$reqs')";
+                                
 
-            if ($conn->query($sql) === TRUE) {
+            if ($conn->query($insert) === TRUE) {
                 echo "<p>New record created successfully</p>";
             } 
             else {
-                echo "<p>Error: " . $sql . "<br>" . $conn->error . "</p>";
+                echo "<p>Error: " . $insert . "<br>" . $conn->error . "</p>";
             }
 
 
