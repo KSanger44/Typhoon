@@ -55,7 +55,7 @@
                     <?php
                       include("typhoonconfig.php");
                       session_start();
-                      $sql = "SELECT * FROM announcement ORDER BY date DESC LIMIT 10";
+                      $sql = "SELECT * FROM announcement ORDER BY date DESC LIMIT 5";
                       $result = mysqli_query($conn,$sql);
                       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
