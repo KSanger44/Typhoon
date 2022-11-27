@@ -107,7 +107,7 @@
             
             //OOP insert into site table
             
-            $insert = "INSERT INTO `site` #(`sID`, `name`, `level`, `street`, `city`, `state`, `zip`, `myce`, `90daytb`, `2steptb`, `drugscreen`, `uniquereq`) 
+/*             $insert = "INSERT INTO `site` #(`sID`, `name`, `level`, `street`, `city`, `state`, `zip`, `myce`, `90daytb`, `2steptb`, `drugscreen`, `uniquereq`) 
                                 VALUES (NULL, '$name', '$level', '$street', '$city', '$state', '$zip', '$myce', '$tb90day', '$tb2step', '$drugscreen', '$reqs')";
                                 
 
@@ -116,8 +116,9 @@
             } 
             else {
                 echo "<p>Error: " . $insert . "<br>" . $conn->error . "</p>";
-            }
-
+            } */
+          
+            
            // Procedural insert into site table
            $sql = "INSERT INTO `site` #(`sID`, `name`, `level`, `street`, `city`, `state`, `zip`, `myce`, `90daytb`, `2steptb`, `drugscreen`, `uniquereq`) 
            VALUES (NULL, '$name', '$level', '$street', '$city', '$state', '$zip', '$myce', '$tb90day', '$tb2step', '$drugscreen', '$reqs')";
