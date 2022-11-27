@@ -176,8 +176,5 @@
 
         <div id="map_div"></div>
 
-
-        </script>
-
     </body>
 </html>
