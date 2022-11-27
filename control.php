@@ -103,12 +103,13 @@
                 }   
               }
               
-
+                echo $_GET['sitelist'];
                 ?>
             </select>
             <input type="submit" id="deletesite" name="deletesite" value="Delete">
           </form>
 
+          
           </div>
           
 
