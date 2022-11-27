@@ -67,7 +67,7 @@
           <div id="sitedelete">
           <form>
             <h3>Remove Sites</h3>
-            <label for="sites">Site to Delete:</label>
+            <label for="sites">Site to delete:</label>
             <select id="sites" name="sitelist">
             <?php   
               $dsql = "DELETE FROM `site` WHERE sID = '$_GET[id]'"; 
@@ -78,14 +78,15 @@
 
               //display the sql result set in an html table
               $table = $conn->query($sql);
-              if ($table->num_rows > 0) {
+
                 //output each result row
                 while($row = $result->fetch_assoc()){
                   echo "<option value =" . $row['sID'] . ">" . $row['name'] . "</option>";
                 }
-              }
+              
                 ?>
             </select>
+            <input type="submit" id="deletesite" name="deletesite">
           </form>
 
           </div>
