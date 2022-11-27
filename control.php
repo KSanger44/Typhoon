@@ -162,6 +162,7 @@
           if (mysqli_query($conn, $sql)) {
             $last_id = mysqli_insert_id($conn);
             echo "New record created successfully. Last inserted ID is: " . $last_id;
+            header("Refresh:0");
           } else {
               echo "Error: " . $sql . "<br>" . mysqli_error($conn);
           }          
