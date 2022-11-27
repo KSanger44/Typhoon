@@ -188,30 +188,30 @@
   justify-items: center;
 }
 
-.hospitals {
+#ugHospitals {
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 5;  
 }
 
-.hospitals summary {
+#ugHospitals summary {
   font-size: 3em;
 }
 
-.hospitals p { 
+#ugHospitals p { 
   font-size: 1.5em;
 }
 
-.hospitals h4 { 
+#ugHospitals h4 { 
   font-size: 1.5em;
 }
 
-.hospitals a { 
+#ugHospitals a { 
   font-size: 1.5em;
 }
 
-.hospitals details { 
+#ugHospitals details { 
   margin-bottom: 1em;
 }
 
