@@ -69,6 +69,7 @@
             <h3>Remove Sites</h3>
             <label for="sites">Site to delete:</label>
             <select id="sites" name="sitelist">
+
             <?php   
               $dsql = "DELETE FROM `site` WHERE sID = '$_GET[id]'"; 
 
@@ -80,10 +81,12 @@
               $table = $conn->query($lsql);
 
                 //output each result row
-                while($lrow = $result->fetch_assoc()){
+                while($lrow = $lresult->fetch_assoc()){
                   echo "<option value =" . $row['sID'] . ">" . $row['name'] . "</option>";
                 }
               
+
+
                 ?>
             </select>
             <input type="submit" id="deletesite" name="deletesite">
