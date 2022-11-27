@@ -79,12 +79,12 @@
 
               //display the sql result set in an html table
               $table = $conn->query($lsql);
-
+              if ($table->num_rows > 0) {
                 //output each result row
                 while($lrow = $lresult->fetch_assoc()){
                   echo "<option value ='" . $lrow['sID'] . "'>" . $lrow['name'] . "</option>";
                 }
-              
+              }
 
 
                 ?>
