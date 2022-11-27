@@ -67,7 +67,7 @@
            
                       while($row = $result->fetch_assoc()){
                               echo "<h4>" .  $row['title'] . "</h4>";
-                              echo "<p>" .  $row['info'] . "</p";
+                              echo "<p>" .  $row['info'] . "</p><br><br>";
                       } //end of while
                   
                       ?>
