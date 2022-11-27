@@ -81,7 +81,7 @@
               if ($table->num_rows > 0) {
                 //output each result row
                 while($row = $result->fetch_assoc()){
-                  echo "<option value =" . $row['sID'] . ">" . $row['name'] . "</option>"
+                  echo "<option value =" . $row['sID'] . ">" . $row['name'] . "</option>";
                 }
               }
                 ?>
