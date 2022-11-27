@@ -259,3 +259,8 @@ details {
 summary {
   font-size: 3em;
 }
+
+.darkmode {
+  background-color: black;
+  color: white;
+}
