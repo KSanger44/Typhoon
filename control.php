@@ -90,10 +90,18 @@
               if ($table->num_rows > 0) {
                 //output each result row
                 while($lrow = $lresult->fetch_assoc()){
-                  echo "<option value ='" . $lrow['sID'] . "'>" . $lrow['name'] . "</option>";
+                  echo "<option value ='" . $lrow['sID'] . "'>" . $lrow['name'] . " (" . $lrow['level'] . ") </option>";
                 }
               }
-
+              
+              if(isset($GET['deletesite'])){
+                if (mysqli_query($conn, $dsql)) {
+                  echo "Record deleted successfully.";
+                } else {
+                    echo "Error: " . $dql . "<br>" . mysqli_error($conn);
+                }      
+              }
+              
 
                 ?>
             </select>
