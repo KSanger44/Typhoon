@@ -63,6 +63,32 @@
             </form>
           </div>
           <br><br>
+
+          <div id="sitedelete">
+          <form>
+            <h3>Remove Sites</h3>
+            <label for="sites">Site to Delete:</label>
+            <select id="sites" name="sitelist">
+            <?php   
+              $dsql = "DELETE FROM `site` WHERE sID = '$_GET[id]'"; 
+
+              $lsql = "SELECT * FROM site";
+              $lresult = mysqli_query($conn,$lsql);
+              $lrow = mysqli_fetch_array($lresult,MYSQLI_ASSOC);
+
+              //display the sql result set in an html table
+              $table = $conn->query($sql);
+              if ($table->num_rows > 0) {
+                //output each result row
+                while($row = $result->fetch_assoc()){
+                  echo "<option value =" . . $row['sID'] . ">" . $row['name'] . "</option>"
+                }
+              }
+                ?>
+            </select>
+          </form>
+
+          </div>
           
 
           <br><br>
@@ -148,6 +174,8 @@
               echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
           }      
         }
+
+
 
   $conn->close();      
     ?>
