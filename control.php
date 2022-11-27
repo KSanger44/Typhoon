@@ -109,8 +109,8 @@
             <form action="" method="post">
                 <label for="Announcement">Announcement Title:</label><br>
                 <input type="text" id="Announcement" name="Announcement"><br>
-                <label for="AnnounceDesc">Description:</label><br>
-                <textarea id="announceDesc" name="AnnonceDesc" rows="4" cols="50"></textarea><br>
+                <label for="announceDesc">Description:</label><br>
+                <textarea id="announceDesc" name="announceDesc" rows="4" cols="50"></textarea><br>
                 <br>
                 <input type="submit" id="submit2" name="submit2">
             </form>
