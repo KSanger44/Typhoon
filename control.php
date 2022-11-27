@@ -79,7 +79,7 @@
               if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
               }   
-              $dsql = "DELETE FROM `site` WHERE sID = '$_GET[sID]'"; 
+              
 
               $lsql = "SELECT * FROM site";
               $lresult = mysqli_query($conn,$lsql);
@@ -95,6 +95,7 @@
               }
               
               if(isset($GET['deletesite'])){
+                $dsql = "DELETE FROM `site` WHERE sID = '$_GET['sitelist']'"; 
                 if ($conn->query($dsql) === TRUE) {
                   echo "Record deleted successfully";
                 } else {
