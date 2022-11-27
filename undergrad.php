@@ -2,7 +2,7 @@
 <?php
     include("typhoonconfig.php");
     session_start();
-    $sql = "SELECT * FROM 'site' WHERE 'level' = 'u' or 'level' = 'b'";
+    $sql = "SELECT * FROM site WHERE level = 'u' or level = 'b'";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
