@@ -82,7 +82,7 @@
 
                 //output each result row
                 while($lrow = $lresult->fetch_assoc()){
-                  echo "<option value =" . $row['sID'] . ">" . $row['name'] . "</option>";
+                  echo "<option value =" . $lrow['sID'] . ">" . $lrow['name'] . "</option>";
                 }
               
 
