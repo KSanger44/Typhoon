@@ -2,7 +2,7 @@
 <?php
     include("typhoonconfig.php");
     session_start();
-    $sql = "SELECT * FROM 'site' WHERE 'level' = 'g' or 'level' = 'b'";
+    $sql = "SELECT * FROM 'site' WHERE 'level' = 'u' or 'level' = 'b'";
     $result = mysqli_query($conn,$esql);
     $row = mysqli_fetch_array($eresult,MYSQLI_ASSOC);
 
@@ -16,7 +16,7 @@
     $tb2step = $row["2steptb"];
     $drugscreen = $row["drugscreen"];
     $req = $row["uniquereq"];
-    
+
 ?>
 <html>
     <!--API Key = AIzaSyCJZaeyRugTZOdzWV9wTgVPrwLCUP7AXYg -->
