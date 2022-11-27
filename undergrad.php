@@ -150,8 +150,8 @@
                     echo "<summary>" . $row['name'] . "</summary>";
                     echo "<h4>Unique Requirements:</h4>";
                     if($row['myce'] == 0 && $row['90daytb'] == 0 && ['2steptb'] == 0 && $row['drugscreen'] == 0 && $row['uniquereq'] == ''){
-                      echo "No unique Requirements.";
-                    }
+                        echo "No unique Requirements.";
+                      }
                     if($row['myce'] == 1){
                       echo "<a href='https://register.myclinicalexchange.com/MainPage.aspx?ReturnUrl=%2f'>MyClinicalExchange</a><br>";
                     }
