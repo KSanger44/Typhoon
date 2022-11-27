@@ -95,11 +95,11 @@
               }
               
               if(isset($GET['deletesite'])){
-                if (mysqli_query($conn, $dsql)) {
-                  echo "Record deleted successfully.";
+                if ($conn->query($dsql) === TRUE) {
+                  echo "Record deleted successfully";
                 } else {
-                    echo "Error: " . $dql . "<br>" . mysqli_error($conn);
-                }      
+                  echo "Error deleting record: " . $conn->error;
+                }   
               }
               
 
