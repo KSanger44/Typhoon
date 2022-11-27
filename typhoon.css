@@ -258,13 +258,12 @@ summary {
 .darkmode {
   background-color: black;
   color: white;
-  display: grid;
-  background-color:aliceblue;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 8% 12% 12% 12% 12%;
-  column-gap: 2em;
-  row-gap: 3em;
-  border: solid 1px #333;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  align-items: center;
+  justify-items: center;
 }
 
 .grid-container {
