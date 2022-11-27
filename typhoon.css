@@ -121,7 +121,7 @@
 
 .wellness {
 
-  background-color: aliceblue;
+  
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 2;
@@ -133,7 +133,7 @@
 
 .viewpoint {
 
-  background-color: aliceblue;
+  
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 3;
@@ -145,7 +145,7 @@
 
 .ches {
 
-  background-color: aliceblue;
+  
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 4;
@@ -157,7 +157,7 @@
 
 .myce {
 
-  background-color: aliceblue;
+  
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 5;
