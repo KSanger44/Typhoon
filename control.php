@@ -65,13 +65,21 @@
           <br><br>
 
           <div id="sitedelete">
-          <form>
+          <form action="" method="get>
             <h3>Remove Sites</h3>
             <label for="sites">Site to delete:</label>
             <select id="sites" name="sitelist">
 
-            <?php   
-              $dsql = "DELETE FROM `site` WHERE sID = '$_GET[id]'"; 
+            <?php
+              //connect to the db schema
+              include("typhoonconfig.php");
+              session_start();
+          
+              // Check connection
+              if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+              }   
+              $dsql = "DELETE FROM `site` WHERE sID = '$_GET[sDd]'"; 
 
               $lsql = "SELECT * FROM site";
               $lresult = mysqli_query($conn,$lsql);
@@ -112,14 +120,6 @@
 
 
           <?php
-        //connect to the db schema
-        include("typhoonconfig.php");
-        session_start();
-    
-        // Check connection
-        if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-        }
     
         $name = isset($_POST['name']) ? $_POST['name'] : "";
         $myce = isset($_POST['myce']) ? $_POST['myce'] : "";
