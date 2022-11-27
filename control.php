@@ -118,6 +118,16 @@
                 echo "<p>Error: " . $insert . "<br>" . $conn->error . "</p>";
             }
 
+           // Procedural insert into site table
+           $sql = "INSERT INTO `site` #(`sID`, `name`, `level`, `street`, `city`, `state`, `zip`, `myce`, `90daytb`, `2steptb`, `drugscreen`, `uniquereq`) 
+           VALUES (NULL, '$name', '$level', '$street', '$city', '$state', '$zip', '$myce', '$tb90day', '$tb2step', '$drugscreen', '$reqs')";
+
+          if (mysqli_query($conn, $sql)) {
+            $last_id = mysqli_insert_id($conn);
+            echo "New record created successfully. Last inserted ID is: " . $last_id;
+          } else {
+              echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+          }          
 
         }//end of isset if stmt
 
