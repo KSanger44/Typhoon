@@ -94,7 +94,7 @@
                 }
               }
               
-              if(isset($GET['deletesite'])){
+              if(isset($_GET['deletesite'])){
                 $deletesite = $_GET['sitelist'];
                 $dsql = "DELETE FROM site WHERE sID = '$deletesite'"; 
                 if (mysqli_query($conn, $dsql)) {
