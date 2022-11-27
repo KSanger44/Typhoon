@@ -1,5 +1,9 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
+<?php
+    include("typhoonconfig.php");
+    session_start();
+    $sql = "SELECT * FROM 'site' WHERE 'level' = 'g' or level = 'b'";
+?>
 <html>
     <!--API Key = AIzaSyCJZaeyRugTZOdzWV9wTgVPrwLCUP7AXYg -->
     <head>
