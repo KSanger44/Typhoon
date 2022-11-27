@@ -3,19 +3,6 @@
     <head>
         <link rel="stylesheet" href="typhoon.css">
         <title>Typhoon</title>
-        <script>
-            function darkMode() {
-            document.getElementsByClassName('announcements').style.backgroundColor = "black";
-            document.getElementsByClassName('announcements').style.color = "white"
-            element.classList.toggle("darkmode");
-            }
-
-            function lightkMode() {
-            document.getElementsByClassName('announcements').style.backgroundColor = "aliceblue";
-            document.getElementsByClassName('announcements').style.color = "black"
-            element.classList.toggle("darkmode");
-            }
-        </script>
     </head>
     <body>
 
@@ -89,4 +76,17 @@
           </div>
 
     </body>
+    <script>
+            function darkMode() {
+            document.getElementsByClassName('announcements').style.backgroundColor = "black";
+            document.getElementsByClassName('announcements').style.color = "white"
+            element.classList.toggle("darkmode");
+            }
+
+            function lightkMode() {
+            document.getElementsByClassName('announcements').style.backgroundColor = "aliceblue";
+            document.getElementsByClassName('announcements').style.color = "black"
+            element.classList.toggle("darkmode");
+            }
+        </script>
 </html>
