@@ -3,6 +3,20 @@
     include("typhoonconfig.php");
     session_start();
     $sql = "SELECT * FROM 'site' WHERE 'level' = 'g' or 'level' = 'b'";
+    $result = mysqli_query($conn,$esql);
+    $row = mysqli_fetch_array($eresult,MYSQLI_ASSOC);
+
+    $name = $row["name"];
+    $level = $row["level"];
+    $street = $row["street"];
+    $city = $row["city"];
+    $zip = $row["zip"];
+    $myce = $row["myce"];
+    $tb90day = $row["90daytb"];
+    $tb2step = $row["2steptb"];
+    $drugscreen = $row["drugscreen"];
+    $req = $row["uniquereq"];
+    
 ?>
 <html>
     <!--API Key = AIzaSyCJZaeyRugTZOdzWV9wTgVPrwLCUP7AXYg -->
