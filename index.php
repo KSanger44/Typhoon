@@ -64,9 +64,6 @@
                     <div class="aheader">
                       <h3>Announcements</h3>
                     </div>
-                    <div class="announcement">
-                    <button onclick="darkMode()">Dark mode</button>
-                    <button onclick="lightMode()">Light mode</button>
                     <?php
                       include("typhoonconfig.php");
                       session_start();
@@ -86,7 +83,6 @@
                       } //end of while
                   
                       ?>
-                    </div>
                 </div>              
           </div>
 
