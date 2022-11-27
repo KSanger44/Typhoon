@@ -5,10 +5,8 @@
         <title>Typhoon</title>
         <script>
             function darkMode() {
-            var element = document.body;
-            var announce = document.announcement
+            var element = document.announcements;
             element.classList.toggle("darkmode");
-            announce.classList.toggle("darkmode");
             }
         </script>
     </head>
