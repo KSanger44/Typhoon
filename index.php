@@ -6,7 +6,7 @@
         <script>
             function darkMode() {
             var element = document.body;
-            var announce = document.announcements
+            var announce = document.announcement
             element.classList.toggle("darkmode");
             announce.classList.toggle("darkmode");
             }
