@@ -17,6 +17,7 @@
     $drugscreen = $row["drugscreen"];
     $req = $row["uniquereq"];
 
+
 ?>
 <html>
     <!--API Key = AIzaSyCJZaeyRugTZOdzWV9wTgVPrwLCUP7AXYg -->
@@ -112,6 +113,10 @@
             <a href="admin.html">Admin</a> 
           </div>
           <br><br>
+
+
+
+
         <div class="grid-container">
           <div class="resources">
             <h4>Helpful Resources</h4>
@@ -134,41 +139,34 @@
           </div>
 
           <div id="ugHospitals">
-            <details>
-              <summary id="Meriter">Meriter Hospital</summary>
-                <h4>Unique Requirements:</h4>
-                <a href="https://register.myclinicalexchange.com/MainPage.aspx?ReturnUrl=%2f">MyClinicalExchange</a>
-                <br>
-            </details>
+            <?php
+                //display the sql result set in an html table
+                $table = $conn->query($sql);
 
-            <details>
-              <summary id="Select">Select Specialty Hospital</summary>
-              <h4>Unique Requirements:</h4>
-              <p>10-Panel Drug Screen</p>
-              <br>  
-            </details>
-            
-            <details>
-              <summary id="SSM">St Mary's Hospital</summary>
-              <h4>Unique Requirements:</h4>
-              <a href="https://register.myclinicalexchange.com/MainPage.aspx?ReturnUrl=%2f">MyClinicalExchange</a>
-              <br>
-            </details>
-            
-            <details>
-              <summary id="UW">UW & American Family Children's Hospital</summary>
-              <h4>Unique Requirements:</h4>
-              <a href="https://register.myclinicalexchange.com/MainPage.aspx?ReturnUrl=%2f">MyClinicalExchange</a>
-              <br>  
-            </details>
-            
-            <details>
-              <summary id="VA">William S Middleton Memorial Veteran's Hospital</summary>
-              <h4>Unique Requirements:</h4>
-              <p>Annual Physical</p>
-              <p>TB test 90 days before start date</p>
-              <br>
-            </details> 
+                if ($table->num_rows > 0) {
+                  //output each result row
+                  while($row = $result->fetch_assoc()){
+                    echo "<details>";
+                    echo "<summary>" . $row['name'] . "</summary>";
+                    echo "<h4>Unique Requirements:</h4>";
+                    if($row['myce'] == 1){
+                      echo "<a href='https://register.myclinicalexchange.com/MainPage.aspx?ReturnUrl=%2f'>MyClinicalExchange</a><br>";
+                    }
+                    if($row['90daytb'] == 1){
+                      echo "<p>TB test 90 days before start date</p><br>";
+                    }
+                    if($row['2steptb'] == 1){
+                      echo "<p>A 2-step TB test is required</p><br>";
+                    }
+                    if($row['drugscreen'] == 1){
+                      echo "<p>A 10-Panel Drug Screen is required</p><br>";
+                    }
+                    echo $row['uniquereq'] . "<br>";
+                    echo "</details>";
+                    
+                  }//end of while
+                }//end of if
+            ?> 
           </div>
         </div>
 
