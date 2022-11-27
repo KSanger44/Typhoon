@@ -95,7 +95,7 @@
               }
               
               if(isset($GET['deletesite'])){
-                $dsql = "DELETE FROM site WHERE sID = `$_GET['sitelist']`"; 
+                $dsql = "DELETE FROM site WHERE sID = '$_GET["sitelist"]'"; 
                 if ($conn->query($dsql) === TRUE) {
                   echo "Record deleted successfully";
                 } else {
