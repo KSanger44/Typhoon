@@ -3,6 +3,17 @@
     <head>
         <link rel="stylesheet" href="typhoon.css">
         <title>Typhoon</title>
+
+        <script>
+        function sampleFunction() {
+          var Elem = document.getElementById("announcements");
+          if (Elem.className === "announcements") {
+          Elem.className = "darkmode";
+          } else {
+          Elem.className = "announcements";
+          }
+          }
+        </script>  
     </head>
     <body>
 
@@ -76,14 +87,4 @@
           </div>
 
     </body>
-    <script>
-            function darkMode() {
-              var Elem = document.getElementById("announcements");
-              if (sampleElem.className === "lightmode") {
-              sampleElem.className = "darkmode";
-              } else {
-              sampleElem.className = "lightmode";
-              }
-            }
-        </script>
 </html>
