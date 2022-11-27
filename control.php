@@ -95,7 +95,8 @@
               }
               
               if(isset($GET['deletesite'])){
-                $dsql = "DELETE FROM site WHERE sID = '$_GET[sitelist]'"; 
+                $deletesite = $_GET['sitelist'];
+                $dsql = "DELETE FROM site WHERE sID = '$deletesite'"; 
                 if (mysqli_query($conn, $dsql)) {
                   echo "Record deleted successfully";
                 } else {
@@ -103,7 +104,7 @@
                 }   
               }
               
-                echo $_GET['sitelist'];
+                echo $deletesite;
                 ?>
             </select>
             <input type="submit" id="deletesite" name="deletesite" value="Delete">
