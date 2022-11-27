@@ -3,6 +3,12 @@
     <head>
         <link rel="stylesheet" href="typhoon.css">
         <title>Typhoon</title>
+        <script>
+            function darkMode() {
+            var element = document.body;
+            element.classList.toggle("darkmode");
+            }
+        </script>
     </head>
     <body>
 
@@ -52,6 +58,7 @@
                       <h3>Announcements</h3>
                     </div>
                     <div class="announcement">
+                    <button onclick="darkMode()">Toggle dark mode</button>
                     <?php
                       include("typhoonconfig.php");
                       session_start();
