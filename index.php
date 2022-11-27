@@ -63,6 +63,8 @@
                 <div class="announcements">
                     <div class="aheader">
                       <h3>Announcements</h3>
+                      <button onclick="darkMode()">Dark mode</button>
+                      <button onclick="lightMode()">Light mode</button>
                     </div>
                     <?php
                       include("typhoonconfig.php");
